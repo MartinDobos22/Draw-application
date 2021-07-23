@@ -1,0 +1,134 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.container:before,
+.group:before,
+.menu:before,
+.container:after, 
+.group:after,
+.menu:after {
+    content: " "; 
+    display: table; 
+}
+
+.container:after,
+.group:after,
+.menu:after {
+    clear: both;
+}
+
+.for_drawing  {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    height: $light_color;
+    font-family: "Roboto", "Helvetica", sans-serif;
+}
+
+.drawing {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    background: $dark_color;
+
+    .drawing-section  {
+        display: block;
+        margin: 15px auto;
+        width: 30px;
+        height: 30px;
+    }
+
+    .colors {
+        background: $dark_color;
+        border: 1px solid $light_color;
+        position: relative;
+        
+        .color-picker {
+            display: none;
+            width: 200px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+
+            &:focus {
+                display: block;
+            }
+        }
+
+        &:hover {
+            .color-picker {
+                display: block;
+            }
+        }
+    }
+
+    .thickness {
+
+        position: relative;
+        background: $light_color;
+
+        &::after {
+
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background: $dark_color;
+        }
+        .stroke-weight {
+            display: none;
+            position: absolute;
+            width: auto;
+            height: 25px;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:focus {
+                display: block;
+            }
+        }
+
+        &:hover {
+            .stroke-weight {
+                display: block;
+            }
+        }
+    }
+
+    .clear {
+
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        color: $dark_color;
+        font-size: 20px;
+        font-weight: 900;
+        background: $primary_color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.hidden {
+    display: none;
+}
