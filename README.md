@@ -1,6 +1,6 @@
 # Draw-application
 
-This is a simple web application built using HTML, SASS, and JavaScript that allows users to draw on a canvas with various colors and brush sizes. The application includes a toolbar with options for selecting brush size and color, as well as an eraser tool. Users can also save and download their drawings as PNG files.
+This is a simple web application built using HTML, SASS, and JavaScript that allows users to draw on a canvas with various colors and brush sizes. The application includes a toolbar with options for selecting brush size and color, as well as an eraser tool.
 
 The application is built with the following technologies:
 
@@ -31,7 +31,6 @@ The application includes the following files and directories:<br />
 index.html: the main HTML file for the application<br />
 styles/: a directory containing the SASS files for styling the application<br />
 js/: a directory containing the JavaScript files for the application<br />
-images/: a directory containing images used in the application<br />
 LICENSE: the license for the application<br />
 
 Contribution
